@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ChariTeam - Free Nonprofit Website Template</title>
+    <title>AR Logistics</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -39,8 +39,8 @@
     <!-- Spinner End -->
 
 
-     <!-- Navbar Start -->
-     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
                 <small><i class="fa fa-map-marker-alt me-2"></i> Navi Mumbai ,India</small>
@@ -48,9 +48,9 @@
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href="https://www.linkedin.com/in/ajay-singh-8183961b9/"><i class="fab fa-linkedin-in"></i></a>
                 <a class="text-white-50 ms-3" href=""><i class="fab fa-facebook-f"></i></a>
                 <a class="text-white-50 ms-3" href=""><i class="fab fa-twitter"></i></a>
-                <a class="text-white-50 ms-3" href=""><i class="fab fa-linkedin-in"></i></a>
                 <a class="text-white-50 ms-3" href=""><i class="fab fa-instagram"></i></a>
             </div>
         </div>
@@ -64,23 +64,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="services.html" class="nav-item nav-link">Services</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
                             <a href="services.html" class="dropdown-item">Services</a>
-                            <a href="donate.html" class="dropdown-item">Contact Us</a>
-                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="contact.html" class="dropdown-item active">Contact Us</a>
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.html" class="nav-item nav-link active">Contact</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
-                    <a class="btn btn-outline-primary py-2 px-3" href="">
+                    <a class="btn btn-outline-primary py-2 px-3" href="contact.html">
                         Connect Now
                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
@@ -107,7 +105,42 @@
         </div>
     </div>
     <!-- Page Header End -->
+    
 
+    <!-- Email Script start-->
+    <script>
+        function submitForm() {
+            // Validate the form (you can customize this based on your requirements)
+            if (!validateForm()) {
+                return;
+            }
+    
+            // Get form data
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+    
+            // Create the mailto link with the form data
+            var mailtoLink = 'mailto:arlogistics@gmail.com.com' +
+                '?subject=' + encodeURIComponent(subject) +
+                '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nSubject: ' + subject + '\n\nMessage: ' + message);
+    
+            // Open the user's default email client
+            window.location.href = mailtoLink;
+    
+            // Clear form (optional)
+            document.getElementById('contactForm').reset();
+        }
+    
+        function validateForm() {
+            // Add your form validation logic here
+            // Return true if the form is valid, otherwise return false
+            return true;
+        }
+    </script>
+    
+    <!--Email script end-->
 
     <!-- Contact Start -->
     <div class="container-xxl py-5">
@@ -115,8 +148,9 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Contact Us</div>
-                    <h1 class="display-6 mb-5">If You Have Any Query, Please Contact Us</h1>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <h1 class="display-6 mb-5">If You Have Any Query, GET IN TOUCH!!</h1>
+                    <p class="mb-4">Have any questions? We are always happy to help. Do not hesitate to call us or Fill up the form below. We try to get back as soon as possible.
+
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -144,23 +178,26 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary py-2 px-3 me-3">
+                                <button type="button" class="btn btn-primary py-2 px-3 me-3" onclick="submitForm()">
                                     Send Message
                                     <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                         <i class="fa fa-arrow-right"></i>
                                     </div>
                                 </button>
+                                
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
+                    
                     <div class="position-relative rounded overflow-hidden h-100">
                         <iframe class="position-relative w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116841.00768315718!2d73.02667164763382!3d19.024755946241636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c960f46b677b%3A0xe31b646bfbfefc4a!2sOff.No.220%2C%202nd%20Floor%2C%20Thaper%20Complex%2C%20Plot%20No.%2051%2C%20Sector%2015%2C%20Opp.%20D%20Mart%2C%20CBD%20Belapur%2C%20Navi%20Mumbai%2C%20400614!5e0!3m2!1sen!2sin!4v1603831545781!5m2!1sen!2sin"
+                            frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -168,63 +205,80 @@
     <!-- Contact End -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h1 class="fw-bold text-primary mb-4">AR<span class="text-white">Logistics</span></h1>
-                    <p>We specialize in Freight Forwarding & Customs Clearance services, offering you seamless solutions & your goods will navigate the complex global logistics with efficiency. Experience the difference with us today!</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square me-1" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>Off.No.220, 2nd Floor,Thaper Complex,Plot No. 51,Sector 15,Opp. D Mart,CBD Belapur,Navi Mumbai-400614
-                        Maharashtra, India
-                        
-                        
-                        </p>
-                    <p><i class="fa fa-phone-alt me-3"></i> 9819740800/ 49745765</p>
-                    <p><i class="fa fa-envelope me-3"></i>arlogistics@gmail.com</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Contact Us</h5>
-                    
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Email Us</button>
-                    </div>
+   <!-- Footer Start -->
+   <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h1 class="fw-bold text-primary mb-4">AR<span class="text-white">Logistics</span></h1>
+                <p>We specialize in Freight Forwarding & Customs Clearance services, offering you seamless solutions & your goods will navigate the complex global logistics with efficiency. Experience the difference with us today!</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-square me-0" href="https://www.linkedin.com/in/ajay-singh-8183961b9/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square me-1" href=""><i class="fab fa-youtube"></i></a>
+            
                 </div>
             </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Address</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>Off.No.220, 2nd Floor,Thaper Complex,Plot No. 51,Sector 15,Opp. D Mart,CBD Belapur,Navi Mumbai-400614
+                    Maharashtra, India
+                    
+                    
+                    </p>
+                <p><i class="fa fa-phone-alt me-3"></i> 9819740800/ 49745765</p>
+                <p><i class="fa fa-envelope me-3"></i><a href="mailto:arlogistics@gmail.com">arlogistics@gmail.com</a></p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Quick Links</h5>
+                <a class="btn btn-link" href="about.html">About Us</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                <a class="btn btn-link" href="services.html">Our Services</a>
+                <a class="btn btn-link" href="contact.html">Terms & Condition</a>
+                <a class="btn btn-link" href="contact.html">Support</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Contact Us</h5>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" id="emailInput" placeholder="Your message">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" onclick="sendEmail()">Email Us</button>
+                </div>
+                
+                <script>
+                    function sendEmail() {
+                        // Get the message input value
+                        var message = document.getElementById('emailInput').value;
+                
+                        // Hardcoded email address
+                        var email = 'arlogistics@gmail.com';
+                
+                        // Create the mailto link with the email address and the message
+                        var mailtoLink = 'mailto:' + email + '?body=' + encodeURIComponent(message);
+                
+                        // Open the user's default email client
+                        window.location.href = mailtoLink;
+                    }
+                </script>
+                
+            </div>
         </div>
-        <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">AR Logistics</a>, All Right Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://htmlcodex.com">Shikha Singh</a>
-                    </div>
+    </div>
+    <div class="container-fluid copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a href="#">AR Logistics</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a href="https://htmlcodex.com">Shikha Singh</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</div>
+<!-- Footer End -->
 
 
     <!-- Back to Top -->
